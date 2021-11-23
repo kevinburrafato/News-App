@@ -1,11 +1,16 @@
 import { useRouter } from 'next/router';
 import styles from '../../styles/Feed.module.css';
+import Head from 'next/head';
 import { Toolbar } from '../../components/Toolbar';
 
 export const Feed = ({ articles, pageNumber }) => {
   const router = useRouter();
   return (
       <div className="page-container">
+        <Head>
+        <title>Today News</title>
+        <meta name='keywords' content='today news' />
+      </Head> 
         <Toolbar />
 
         <div className={styles.main}>
